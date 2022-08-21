@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap");
 /* DynaPuff(숫자) : font-family: 'DynaPuff', cursive; */
 
+:root {
+  /* color */
+  --main-color: #796652;
+}
+
 body {
   margin: 0; /* 스크린 크기와 상관없이 화면에 꽉차게 fix 가능 */
   height: 100vh;
@@ -12,42 +17,60 @@ body {
   background-size: cover;
   display: flex;
   align-items: center;
-  color: #424644;
+  color: var(--main-color);
 }
 
 /* login-form */
-#login-form {
+.login-form {
   width: 100%;
   height: 100%;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);  
+  backdrop-filter: blur(10px);  
   z-index: 3;
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
   position: absolute;
+  font-family: 'DynaPuff', cursive;
 }
 
-#login-form input {
+.login-form input {
   background: transparent;
   border: none;
-  border-bottom: 2px solid white;
-  width: 300px;
-  height: 50px;
+  border-bottom: 3px solid var(--main-color);;
+  width: 400px;
+  height: 60px;
   text-align: center;
-  font-size: 30px;
-  color: rgba(255, 255, 255, 0.945);
+  font-size: 40px;
+  color: var(--main-color);
   font-family: 'DynaPuff', cursive;
 }
-#login-form input:focus {
+.login-form input:focus {
   outline: none;
 }
-#login-form input::placeholder {
-  color: rgba(255, 255, 255, 0.945);
+.login-form input::placeholder {
+  color: var(--main-color);
   font-family: 'DynaPuff', cursive;
 }
-
+.login-form button {
+  width: 150px;
+  height: 30px;
+  border-radius: 7px;
+  margin-top:25px;
+  padding: 10px, 5px;
+  border: none;
+  font-size: 20px;
+  background-color: var(--main-color);
+  font-family: 'DynaPuff', cursive;
+  color: white;
+}
+.hidden {
+  transition: all 1.5s ease-in-out;
+  opacity: 0;
+}
+.remove {
+  display:none;
+}
 
 /* 추가검토!!! google 검색 바로 할 수 있는 칸 만들기 */
 #main {
@@ -67,8 +90,8 @@ body {
 .main-background {
   width: 350px;
   height: 600px;
-  background-color: white;
-  opacity: 0.4;
+  background-color:white;
+  opacity: 0.6;
   border-radius: 15px;
   position: absolute;
 }
