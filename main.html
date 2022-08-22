@@ -12,18 +12,11 @@
     ></script>
   </head>
   <body>
-    <form class="login-form">
-      <input
-        required
-        maxlength="12"
-        type="text"
-        placeholder="Enter your name"
-      />
-      <button>Log in</button>
-    </form>
+    <div id="greetings">Dear username,</div>
     <div id="main">
       <div class="main-content first-column">
         <div class="main-background"></div>
+        <!--요소들을 main-background 클래스 안에 넣게 되면 opacity=0.6이 적용되기 때문에 배경 <div>를 별도로 추가함-->
         <span id="clock">00:00:00</span>
         <div id="weather">weather API</div>
         <div id="fourtune-teller">fourtune-teller</div>
@@ -35,10 +28,8 @@
           <span>My To-do lists</span>
         </div>
       </div>
-      <div class="main-content banners">
-        <div class="main-background"></div>
-      </div>
+      <div class="banners"></div>
     </div>
-    <script src="main.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
