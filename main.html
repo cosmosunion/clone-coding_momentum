@@ -12,24 +12,42 @@
     ></script>
   </head>
   <body>
-    <div id="greetings">Dear username,</div>
+    <a
+      href="file:///C:/Users/82102/Dropbox/Programming/github/clone-coding_momentum/main.html"
+      id="home"
+      title="첫 화면으로 이동"
+      ><i class="fa-solid fa-house-chimney fa-2x"></i
+    ></a>
+    <form class="login-form hidden">
+      <input
+        required
+        maxlength="12"
+        type="text"
+        placeholder="Enter your name"
+      />
+      <button>Log in</button>
+    </form>
     <div id="main">
-      <div class="main-content first-column">
-        <div class="main-background"></div>
-        <!--요소들을 main-background 클래스 안에 넣게 되면 opacity=0.6이 적용되기 때문에 배경 <div>를 별도로 추가함-->
-        <span id="clock">00:00:00</span>
-        <div id="weather">weather API</div>
-        <div id="fourtune-teller">fourtune-teller</div>
-      </div>
-      <div class="main-content second-column">
-        <div class="main-background"></div>
-        <i class="fa-solid fa-bookmark fa-3x"></i>
-        <div class="to-do-lists">
-          <span>My To-do lists</span>
+      <h1 id="greetings" class=""></h1>
+      <div id="main-contents">
+        <div class="main-content first-column">
+          <div class="main-background"></div>
+          <!--요소들을 main-background 클래스 안에 넣게 되면 opacity=0.6이 적용되기 때문에 배경 <div>를 별도로 추가함-->
+          <span id="clock">00:00:00</span>
+          <div id="weather">weather API</div>
+          <div id="fourtune-teller">fourtune-teller</div>
         </div>
+        <div class="main-content second-column">
+          <div class="main-background"></div>
+          <i class="fa-solid fa-bookmark fa-3x"></i>
+          <div class="to-do-lists">
+            <span>My To-do lists</span>
+          </div>
+        </div>
+        <div class="banners"></div>
       </div>
-      <div class="banners"></div>
     </div>
-    <script src="login.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/clock.js"></script>
   </body>
 </html>
