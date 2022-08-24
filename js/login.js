@@ -22,3 +22,12 @@ if (savedUsername === null) {
 } else {
   greetings.innerText = `Dear ${savedUsername},`;
 }
+
+const home = document.querySelector("#home");
+function backHome(savedUsername) {
+  if (savedUsername !== null) {
+    localStorage.removeItem("username");
+    location.reload(true);
+  }
+}
+home.addEventListener("click", backHome);

@@ -2,6 +2,12 @@
 /* 나눔고딕(글자) : font-family: 'Dosis', sans-serif */
 @import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap");
 /* DynaPuff(숫자) : font-family: 'DynaPuff', cursive; */
+@font-face {
+  font-family: "RIDIBatang";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/RIDIBatang.otf");
+}
 
 :root {
   /* color */
@@ -101,7 +107,7 @@ body {
 
 /* 추가검토!!! google 검색 바로 할 수 있는 칸 만들기 */
 #main {
-  width: 960px;
+  width: 860px;
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -136,27 +142,60 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  font-family: "RIDIBatang";
 }
 
 #clock {
+  width: 300px;
   margin-top: 50px;
-  font-size: 40px;
+  font-size: 20px;
   z-index: 2;
 }
-
-#weather {
+#clock span {
+  margin: 10px;
+}
+#geolocation {
   width: 300px;
   height: 80px;
-  background-color: red;
+  font-size: 20px;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#geolocation span {
+  margin: 10px;
 }
 
-#fourtune-teller {
+/* Today's quote */
+#quotes {
   width: 300px;
-  height: 130px;
-  margin-bottom: 50px;
-  background-color: blue;
+  height: 150px;
+  padding: 5px 5px;
+  margin-bottom: 45px;
+  background-color: #cad5cf;
+  border-radius: 15px;
+  color: var(--main-color);
+  font-size: 23px;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  line-height: 27px;
+}
+#quotes span:nth-child(2) {
+  margin-top: 8px;
+  font-size: 17px;
+}
+#quotes button {
+  margin-top: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: none;
+  border: none;
+  color: var(--main-color);
 }
 
 /* second-column contains To-do lists */
@@ -174,9 +213,34 @@ body {
 
 /* banners contains links of github, tstory-blog, nomadcoder-academy, */
 .banners {
-  width: 200px;
+  width: 100px;
   height: 450px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banners a {
+  width: 100px;
+  height: 100px;
   background-color: white;
   opacity: 0.6;
   border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: 90px 90px;
+}
+.banners a:first-child {
+  background-image: url("https://w.namu.la/s/aec084b1eda1878b6aba5c6edba4950075de77d601abdef0894f59c164089a096c2dd305fc578a64f8519dd129f3aea87dc54660d52820a1b33c259f1295501c26eb5d1b702e11631c80364b11716b2f84fc5637870efa15b7ded06a3f61389d");
+}
+.banners a:nth-child(2) {
+  background-image: url("https://velog.velcdn.com/images/hyeongjoon/post/b317cd2d-b386-44ba-8b1a-d81d2071fb1e/image.png");
+}
+.banners a:nth-child(3) {
+  background-image: url("https://nomadcoders.co/m.svg");
+  background-size: 50px 50px;
+}
+.banners a:last-child {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/MDN_Web_Docs_logo.svg/768px-MDN_Web_Docs_logo.svg.png");
+  background-size: 90px 30px;
 }
