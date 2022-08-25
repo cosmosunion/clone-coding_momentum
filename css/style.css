@@ -200,15 +200,16 @@ body {
 
 /* second-column contains To-do lists */
 .second-column {
-  position: relative;
+  z-index: 1;
 }
 
 .second-column i {
-  position: absolute;
+  z-index: 2;
   top: -18px;
   left: 10px;
 }
 .to-do-lists {
+  z-index: 2;
 }
 
 /* banners contains links of github, tstory-blog, nomadcoder-academy, */
