@@ -201,19 +201,45 @@ body {
 /* second-column contains To-do lists */
 .second-column {
   z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: "RIDIBatang";
 }
 
 .second-column i {
-  z-index: 2;
+  position: absolute;
   top: -18px;
   left: 10px;
 }
-.to-do-lists {
+#to-do-lists {
   z-index: 2;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+#to-do-lists input {
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  height: 30px;
+  margin: 13px 0;
+  padding: 5px;
+  background-color: #cad5cf;
+  font-size: 15px;
+  font-family: "RIDIBatang";
+  color: var(--main-color);
+}
+#to-do-lists input:focus {
+  outline: none;
+}
+.paragraph-line {
+  width: 1px;
+  heigth: ;
 }
 
 /* banners contains links of github, tstory-blog, nomadcoder-academy, */
-.banners {
+#banners {
   width: 100px;
   height: 450px;
   border-radius: 15px;
@@ -221,7 +247,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.banners a {
+#banners a {
   width: 100px;
   height: 100px;
   background-color: white;
@@ -231,17 +257,17 @@ body {
   background-position: center, center;
   background-size: 90px 90px;
 }
-.banners a:first-child {
+#banners a:first-child {
   background-image: url("https://w.namu.la/s/aec084b1eda1878b6aba5c6edba4950075de77d601abdef0894f59c164089a096c2dd305fc578a64f8519dd129f3aea87dc54660d52820a1b33c259f1295501c26eb5d1b702e11631c80364b11716b2f84fc5637870efa15b7ded06a3f61389d");
 }
-.banners a:nth-child(2) {
+#banners a:nth-child(2) {
   background-image: url("https://velog.velcdn.com/images/hyeongjoon/post/b317cd2d-b386-44ba-8b1a-d81d2071fb1e/image.png");
 }
-.banners a:nth-child(3) {
+#banners a:nth-child(3) {
   background-image: url("https://nomadcoders.co/m.svg");
   background-size: 50px 50px;
 }
-.banners a:last-child {
+#banners a:last-child {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/MDN_Web_Docs_logo.svg/768px-MDN_Web_Docs_logo.svg.png");
   background-size: 90px 30px;
 }
