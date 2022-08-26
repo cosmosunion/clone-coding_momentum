@@ -12,7 +12,7 @@
     ></script>
   </head>
   <body>
-    <div id="home" title="첫 화면으로 이동">
+    <div id="home" title="모든 데이터를 삭제하고 로그아웃">
       <i class="fa-solid fa-house-chimney fa-2x"></i></div>
     </div>
     <form class="login-form hidden">
@@ -53,9 +53,11 @@
           <i class="fa-solid fa-bookmark fa-3x"></i>
           <div id="to-do-lists">
             <span>오늘 하고싶은 일은,</span>
-            <input type="text" placeholder="이곳에 입력하세요 :)"/>
-            <div class="paragraph-line"></div>
-            <ul id="lists"></ul>
+            <form class="to-do-form">
+              <input required type="text" placeholder="입력 후 엔터를 누르세요 :)"/>
+            </form>
+            <ul id="lists">
+            </ul>
           </div>
         </div>
         <!-- 자주가는 사이트 배너 -->

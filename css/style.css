@@ -226,16 +226,25 @@ body {
   margin: 13px 0;
   padding: 5px;
   background-color: #cad5cf;
-  font-size: 15px;
+  font-size: 17px;
   font-family: "RIDIBatang";
   color: var(--main-color);
 }
 #to-do-lists input:focus {
   outline: none;
 }
-.paragraph-line {
-  width: 1px;
-  heigth: ;
+
+#lists li {
+  position: relative;
+  margin: 15px 0;
+}
+#lists li button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin-left: 10px;
+  color: var(--main-color);
+  position: absolute;
 }
 
 /* banners contains links of github, tstory-blog, nomadcoder-academy, */
